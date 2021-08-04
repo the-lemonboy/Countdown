@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Roboto Slab', serif;
+}
+.container{
+    height: 100vh;
+    background-image: url(../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    position: relative;
+}
+/* 目录 */
+.menu{
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    
+}
+.menuBox{
+    background-color: rgba(38,38,38,0.5);
+    width: 200px;
+    height: 135px;
+    z-index: 99;
+    display: none;
+    border-radius: 0.5em;
+    margin-left: 10px;
+   padding: 10px;
+}
+.menu img{
+   width: 50px;
+   cursor: pointer;
+}
+.addInfo img{
+    width: 60px;
+ }
+ .menuContent{
+    cursor: pointer;
+ }
+.menuContent li{
+   list-style-type: none;
+   text-align: center;
+   color:white;
+   margin-bottom: 10px;
+}
+.menuContent li:hover{
+    color: black;
+    background-color: rgba(38,38,38,0.2);
+}
+ /* 内容区域 */
+ .infoZone{
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform: translate(-50%,-50%);
+ }
+ .countdownZone1{
+     display: block;
+     color:white;
+     font-size: 5em;
+     font-weight: 700;
+ }
+ .countdownZone2{
+     font-size: 8em;
+     color: white;
+     font-weight: 400;
+     text-align: center;
+ }
+ .countdownZone3{
+     font-size: 5em;
+     color: white;
+     text-align: center;
+     font-weight: 500;
+ }
+ .timeZone1{
+    color:white;
+    font-size: 9em;
+    font-weight: 500;
+    text-align: center;
+ }
+ .timeZone23{
+     text-align: center;
+ }
+ .timeZone2{
+     color:white;
+     display: inline-block;
+     font-size: 2em;
+     margin: 10px;
+ }
+ .timeZone3{
+     color:white;
+     display: inline-block;
+     font-size: 2em;
+     margin: 10px;
+ }
+
+ /* 添加计时器 */
+ .addInfo{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    cursor: pointer;
+}
+.addInfo img{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.addCountdownBox{
+    width: 300px;
+    height: 200px;
+    border-radius: 0.5em;
+    background-color:rgba(38,38,38,0.5);
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    display: none;
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    margin-top:30px ;
+}
+.inputs p{
+line-height: 40px;
+margin-right: 10px;
+}
+input{
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 0.5em;
+    background-color: rgb(38,38,38);
+    outline: none;
+    border: none;
+    background-color:aliceblue;
+}
+.btnBox{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.btnBox button{
+    width: 70px;
+    height: 40px;
+    border-radius: 0.3em;
+    border:none;
+    margin: 10px;
+    
+}
+/* 切换背景图 */
+.shiftBg{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.shiftBg img{
+    width: 70px;
+    cursor: pointer;
+}
+@keyframes turnZ{
+    0%{transform:rotateZ(0deg);}
+    100%{transform:rotateZ(360deg);}
+  }
+.shiftBg:hover{
+    animation-name:turnZ;
+  animation-duration:2s;
+  animation-iteration-count:1;
+}
+/* 计时器 */
+.addTimeZone{
+    display: none;
+}
+.addTimeZone1 {
+    color:white;
+    font-size: 10em;
+    text-align: center;
+} 
+.addTimeBtn{
+    display: flex;
+    justify-content: center;
+}
+.addTimeBtn img{
+    width: 60px;
+}
+.overBtn{
+    margin-right: 10px ;
+}
+.PSBtn{
+    margin-left: 10px;
+}
+.remind{
+    display: none;
+}
+.remindAudio{
+    display: none;
+}
+.remindBox{
+    width: 300px;
+    height: 200px;
+    border-radius: 0.5em;
+    background-color:rgba(38,38,38,0.9)
+}
+.remindText{
+    display: block;
+    font-size: 1.8em;
+    font-weight: 1000;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.remindBtn{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.remindBtn button{
+    width: 80px;
+    height: 45px;
+    font-size: 1.1em;
+    font-weight: 1000;
+    color: black;
+    background-color: rgba(255, 250, 250, 0.8);
+    border: none;
+    border-radius: 0.2em;
+    line-height: 45px;
+    cursor: pointer;
+}
